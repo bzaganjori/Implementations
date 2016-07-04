@@ -33,9 +33,9 @@ public class AArrayList<E> implements ArrayList<E> {
     @Override
     public String toString() {
         String str = "";
-        for (int i = 0; i < this.array.length; i++) {
-            if (this.array[i] == null) str += "null ";
-            else str += this.array[i] + " ";
+        for (E array1 : this.array) {
+            if (array1 == null) str += "null ";
+            else str += array1 + " ";
         }
         return str;
     }

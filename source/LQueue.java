@@ -40,11 +40,11 @@ public class LQueue<E> implements Queue<E> {
     @Override
     public void enqueue(E e) {
         if (this.tail == null) {
-            this.tail = new Node<E>(e);
+            this.tail = new Node(e);
             this.head = this.tail;
             this.size++;
         } else {
-            this.tail.next = new Node<E>(e);
+            this.tail.next = new Node(e);
             this.tail = this.tail.next;
             this.size++;
         }

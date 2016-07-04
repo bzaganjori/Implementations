@@ -49,9 +49,9 @@ public class AQueue<E> implements Queue<E> {
     @Override
     public String toString() {
         String str = "";
-        for (int i = 0; i < this.array.length; i++) {
-            if (this.array[i] == null) str += this.array[i] + " ";
-            else str += this.array[i] + " ";
+        for (E array1 : this.array) {
+            if (array1 == null) str += array1 + " ";
+            else str += array1 + " ";
         }
         return str;
     }

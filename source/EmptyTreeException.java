@@ -1,10 +1,10 @@
 package source;
 
-public class EmptyQueueException extends Exception {
+public class EmptyTreeException extends Exception {
 
     private static final long serialVersionUID = 1L;
 
-    public EmptyQueueException(String message) {
+    public EmptyTreeException(String message) {
         super(message);
     }
 

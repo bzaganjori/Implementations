@@ -60,12 +60,12 @@ public class LArrayList<E> implements ArrayList<E> {
     public void add(int i, E e) throws IndexOutOfBoundsException {
         if (i < 0 || i > this.size)
             throw new IndexOutOfBoundsException();
-        if (this.head == null) this.head = new Node<E>(e);
+        if (this.head == null) this.head = new Node(e);
         else {
             Node<E> current = this.head;
             while (current.next != null) 
                 current = current.next;
-            current.next = new Node<E>(e);
+            current.next = new Node(e);
         }
         this.size++;
     }
