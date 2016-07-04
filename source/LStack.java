@@ -8,13 +8,19 @@ public class LStack<E> implements Stack<E> {
     private int size;
     
     public LStack() {
-        this.head = new Node<E>();
+        this.head = null;
         this.size = 0;
     }
     
     @Override
     public void push(E e) {
-        this.head.next = new Node<E>(e);
+        if (this.head == null)
+            this.head = new Node<E>(e);
+        else {
+            Node<E> newItem = new Node<E>(e);
+            newItem.next = this.head;
+            this.head = newItem;
+        }
         this.size++;
     }
 
@@ -44,8 +50,10 @@ public class LStack<E> implements Stack<E> {
     public String toString() {
         Node<E> temp = this.head;
         String str = "";
-        while(temp.next != null) 
+        while(temp != null) {
             str += temp.item + " ";
+            temp = temp.next;
+        }
         return str;
     }
 
